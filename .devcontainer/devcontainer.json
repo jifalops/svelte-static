@@ -1,9 +1,9 @@
 {
-	"name": "Web-Svelte",
+	"name": "Svelte-Static",
 	"dockerComposeFile": "./docker-compose.yml",
-	"service": "web-svelte",
+	"service": "svelte-static",
 	"remoteUser": "developer",
-	"workspaceFolder": "/web-svelte",
+	"workspaceFolder": "/svelte-static",
 	"postCreateCommand": ".devcontainer/post-create.sh",
 	"customizations": {
 		"vscode": {
