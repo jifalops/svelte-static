@@ -1,0 +1,1 @@
+FROM jifalops/node:latest

@@ -1,0 +1,24 @@
+{
+	"name": "Web-Svelte",
+	"dockerComposeFile": "./docker-compose.yml",
+	"service": "web-svelte",
+	"remoteUser": "developer",
+	"workspaceFolder": "/web-svelte",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.vscode-typescript-next",
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"dozerg.tsimportsorter",
+				"svelte.svelte-vscode",
+				"bradlc.vscode-tailwindcss",
+				"vunguyentuan.vscode-postcss",
+				"vunguyentuan.vscode-css-variables",
+				"EthanSK.restore-terminals",
+				"antfu.iconify",
+				"heybourn.headwind"
+			]
+		}
+	}
+}

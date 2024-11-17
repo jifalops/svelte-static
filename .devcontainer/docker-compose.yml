@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  web-svelte:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    command: sleep infinity
+    volumes:
+      - ..:/web-svelte:cached
+    environment:
+      TZ: ${TZ} # Timezone
+      GITHUB_TOKEN: ${GITHUB_TOKEN} # GitHub CLI
