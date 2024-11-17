@@ -26,9 +26,9 @@
 					]
 				},
 				{
-					"name": "preview",
+					"name": "test:unit",
 					"commands": [
-						"npm install && npm run build && npm run obfuscate && npm run preview -- --host"
+						"npm install && npm run test:unit"
 					]
 				}
 			]
@@ -36,16 +36,16 @@
 		{
 			"splitTerminals": [
 				{
-					"name": "test:unit",
+					"name": "preview",
 					"commands": [
-						"npm install && npm run test:unit"
+						"npm install && npm run build && npm run obfuscate && npm run preview -- --host"
 					]
 				},
 				{
 					"name": "test:e2e",
 					"commands": [
 						// Wait for the preview server to start.
-						"sleep 10 && npm run test:e2e"
+						"sleep 30 && npm run test:e2e"
 					]
 				}
 			]
