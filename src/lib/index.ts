@@ -1,10 +1,14 @@
 // place files you want to import through the `$lib` alias in this folder.
 
+import { App } from './app';
 import {
 	API_URL,
+	GA_MEASUREMENT_ID,
 	IS_DEVELOPMENT_BUILD
 } from './config';
 import { Log } from './log';
+import { TelemetryServiceConsole } from './telemetry/service_console';
+import { TelemetryServiceGoogleAnalytics } from './telemetry/service_google_analytics';
 
 const init_start = performance.now();
 
@@ -27,4 +31,10 @@ log.debug('Config:', {
 	'isLocalEnvironment()': isLocalEnvironment()
 });
 
-log.info(performance.now(), 'Initialized.');
+export const app = new App(
+	GA_MEASUREMENT_ID
+		? new TelemetryServiceGoogleAnalytics(GA_MEASUREMENT_ID)
+		: new TelemetryServiceConsole()
+);
+
+log.debug(performance.now(), 'Initialized.');
