@@ -4,6 +4,7 @@
 	"service": "web-svelte",
 	"remoteUser": "developer",
 	"workspaceFolder": "/web-svelte",
+	"postCreateCommand": ".devcontainer/post-create.sh",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -17,7 +18,8 @@
 				"vunguyentuan.vscode-css-variables",
 				"EthanSK.restore-terminals",
 				"antfu.iconify",
-				"heybourn.headwind"
+				"heybourn.headwind",
+				"bierner.github-markdown-preview"
 			]
 		}
 	}

@@ -1,0 +1,27 @@
+{
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "explicit",
+		"source.unusedImports": "explicit",
+		"source.organizeImports": "explicit"
+	},
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"restoreTerminals.artificialDelayMilliseconds": 100,
+	"restoreTerminals.terminals": [
+		{
+			"splitTerminals": [
+				{
+					"name": "bash",
+					"commands": []
+				},
+				{
+					"name": "dev server",
+					"commands": [
+						"npm install && npm run dev -- --host"
+					]
+				}
+			]
+		}
+	]
+}
