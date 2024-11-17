@@ -7,21 +7,32 @@
 	"files.associations": {
 		"*.css": "tailwindcss"
 	},
-	"restoreTerminals.artificialDelayMilliseconds": 100,
 	"restoreTerminals.terminals": [
 		{
 			"splitTerminals": [
 				{
-					"name": "bash",
-					"commands": []
+					"name": "dev",
+					"commands": [
+						"sleep 5 && npm run dev -- --host"
+					]
 				},
 				{
-					"name": "dev server",
+					"name": "preview",
 					"commands": [
-						"npm install && npm run dev -- --host"
+						"sleep 5 && npm run build && npm run obfuscate && npm run preview -- --host"
 					]
 				}
 			]
-		}
+		},
+		{
+			"splitTerminals": [
+				{
+					"name": "bash",
+					"commands": [
+						"npm install && npm run test"
+					]
+				}
+			]
+		},
 	]
 }
