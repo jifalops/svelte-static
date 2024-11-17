@@ -1,4 +1,13 @@
 {
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode"
+	},
 	"editor.codeActionsOnSave": {
 		"source.fixAll": "explicit",
 		"source.unusedImports": "explicit",
@@ -34,5 +43,7 @@
 				}
 			]
 		},
-	]
+	],
+	// Fix the double formatter issue that leaves invalid code for imports.
+	// "typescript.format.enable": false
 }
