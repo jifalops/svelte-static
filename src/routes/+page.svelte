@@ -1,5 +1,8 @@
 <script lang="ts">
+	import { log } from '$lib';
 	import SvelteLogo from 'virtual:icons/logos/svelte-icon';
+
+	log.trace(performance.now(), 'Hello from the +page route');
 </script>
 
 <article class="p-2">

@@ -1,23 +1,23 @@
 import { log } from '$lib';
 
 export type ErrorData = {
-	/// A well-defined error code such as `user/not-found`
+	/** A well-defined error code such as `user/not-found` */
 	code: string;
 
-	/// A message to log to the console.
+	/** A message to log to the console. */
 	logMessage?: string;
 
-	/// A message for displaying to the user.
+	/** A message for displaying to the user. */
 	displayMessage?: string;
 
-	/// The cause of the error.
+	/** The cause of the error. */
 	exception?: Error;
 
-	/// Any additional data.
+	/** Any additional data. */
 	extra?: any;
 };
 
-/// Base class for errors in the application.
+/** The base class for errors in the application. */
 export class AppError extends Error {
 	constructor(data: ErrorData) {
 		super(data.code);
