@@ -22,13 +22,30 @@
 				{
 					"name": "dev",
 					"commands": [
-						"sleep 5 && npm run dev -- --host"
+						"npm install && npm run dev -- --host"
 					]
 				},
 				{
 					"name": "preview",
 					"commands": [
-						"sleep 5 && npm run build && npm run obfuscate && npm run preview -- --host"
+						"npm install && npm run build && npm run obfuscate && npm run preview -- --host"
+					]
+				}
+			]
+		},
+		{
+			"splitTerminals": [
+				{
+					"name": "test:unit",
+					"commands": [
+						"npm install && npm run test:unit"
+					]
+				},
+				{
+					"name": "test:e2e",
+					"commands": [
+						// Wait for the preview server to start.
+						"sleep 10 && npm run test:e2e"
 					]
 				}
 			]
@@ -37,13 +54,11 @@
 			"splitTerminals": [
 				{
 					"name": "bash",
-					"commands": [
-						"npm install && npm run test"
-					]
+					"commands": []
 				}
 			]
 		},
 	],
 	// Fix the double formatter issue that leaves invalid code for imports.
-	// "typescript.format.enable": false
+	"typescript.format.enable": false
 }

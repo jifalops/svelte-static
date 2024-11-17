@@ -10,3 +10,4 @@ services:
     environment:
       TZ: ${TZ} # Timezone
       GITHUB_TOKEN: ${GITHUB_TOKEN} # GitHub CLI
+      API_URL: 'https://dummyjson.com'
