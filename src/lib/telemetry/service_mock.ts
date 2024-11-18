@@ -3,9 +3,9 @@ import { log } from '$lib';
 import { TelemetryService } from './service';
 
 /**
- * Console adapter for the telemetry service.
+ * Mock adapter for the telemetry service that logs to the console.
  */
-export class TelemetryServiceConsole extends TelemetryService {
+export class TelemetryServiceMock extends TelemetryService {
 	pageView(path: string): void {
 		log.trace('Telemetry:', 'page_view', path);
 	}

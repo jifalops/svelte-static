@@ -1,40 +1,39 @@
 // place files you want to import through the `$lib` alias in this folder.
 
+import { AdvertisingServiceGoogleAdsense } from './advertising/service_google_adsense';
+import { AdvertisingServiceMock } from './advertising/service_mock';
 import { App } from './app';
 import {
+	ADSENSE_CLIENT_ID,
 	API_URL,
 	GA_MEASUREMENT_ID,
-	IS_DEVELOPMENT_BUILD
+	IS_LOCAL_ENVIRONMENT,
+	IS_PRODUCTION_BUILD
 } from './config';
 import { Log } from './log';
-import { TelemetryServiceConsole } from './telemetry/service_console';
 import { TelemetryServiceGoogleAnalytics } from './telemetry/service_google_analytics';
+import { TelemetryServiceMock } from './telemetry/service_mock';
 
 const init_start = performance.now();
 
-/** Check if running on localhost or a local network. */
-export function isLocalEnvironment(): boolean {
-	if (typeof window === 'undefined') return false;
-	return (
-		window.location.hostname === 'localhost' ||
-		window.location.hostname === '127.0.0.1' ||
-		window.location.hostname.includes('.local')
-	);
-}
-
-export const log = new Log(IS_DEVELOPMENT_BUILD ? Log.TRACE : Log.INFO);
+export const log = new Log(IS_PRODUCTION_BUILD ? Log.INFO : Log.TRACE);
 
 log.debug(init_start, 'Initializing...');
 log.debug('Config:', {
 	API_URL,
-	IS_DEVELOPMENT_BUILD,
-	'isLocalEnvironment()': isLocalEnvironment()
+	IS_PRODUCTION_BUILD,
+	IS_LOCAL_ENVIRONMENT,
+	GA_MEASUREMENT_ID,
+	ADSENSE_CLIENT_ID
 });
 
 export const app = new App(
-	GA_MEASUREMENT_ID
+	ADSENSE_CLIENT_ID && IS_PRODUCTION_BUILD && !IS_LOCAL_ENVIRONMENT
+		? new AdvertisingServiceGoogleAdsense(ADSENSE_CLIENT_ID)
+		: new AdvertisingServiceMock(),
+	GA_MEASUREMENT_ID && IS_PRODUCTION_BUILD && !IS_LOCAL_ENVIRONMENT
 		? new TelemetryServiceGoogleAnalytics(GA_MEASUREMENT_ID)
-		: new TelemetryServiceConsole()
+		: new TelemetryServiceMock()
 );
 
 log.debug(performance.now(), 'Initialized.');

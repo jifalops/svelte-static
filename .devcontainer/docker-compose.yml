@@ -11,3 +11,5 @@ services:
       TZ: ${TZ} # Timezone
       GITHUB_TOKEN: ${GITHUB_TOKEN} # GitHub CLI
       API_URL: 'https://dummyjson.com'
+      GA_MEAUSREMENT_ID: 'G-XXXXXXXXXX'
+      ADSENSE_CLIENT_ID: 'ca-pub-XXXXXXXXXX'

@@ -10,23 +10,19 @@ declare global {
  * Google Analytics 4 adapter for the telemetry service.
  */
 export class TelemetryServiceGoogleAnalytics extends TelemetryService {
-	private gtag: (...args: any[]) => void;
-	private dataLayer: any[] = [];
-
 	constructor(measurementId: string) {
 		super();
-		this.gtag = function gtag() {
-			if (typeof window !== 'undefined' && window.dataLayer != this.dataLayer) {
-				const script = document.createElement('script');
-				script.async = true;
-				script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-				document.head.appendChild(script);
-				window.dataLayer = this.dataLayer;
-			}
-			this.dataLayer.push(arguments);
-		};
+		const script = document.createElement('script');
+		script.async = true;
+		script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+		document.head.appendChild(script);
+		window.dataLayer = window.dataLayer || [];
 		this.gtag('js', new Date());
 		this.gtag('config', measurementId);
+	}
+
+	private gtag(..._: any[]): void {
+		window.dataLayer.push(arguments);
 	}
 
 	pageView(path: string): void {
