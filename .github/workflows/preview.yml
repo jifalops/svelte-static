@@ -30,10 +30,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Set BASE_PATH
+        run: echo "BASE_PATH=/${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.number }}" >> $GITHUB_ENV
+
       - name: Install and Build
         run: |
           npm ci
           npm run build
+          npm run obfuscate
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
