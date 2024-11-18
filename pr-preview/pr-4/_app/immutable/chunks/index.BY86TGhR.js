@@ -1,4 +1,4 @@
-var l=Object.defineProperty;var a=(t,e,n)=>e in t?l(t,e,{enumerable:!0,configurable:!0,writable:!0,value:n}):t[e]=n;var s=(t,e,n)=>a(t,typeof e!="symbol"?e+"":e,n);import{b as d}from"./paths.ssSkkA27.js";class f{}class h extends f{async loadAd(e,n,R){return e.classList.add("block","bg-neutral-500","rounded-lg","overflow-hidden"),e.innerHTML=`
+var l=Object.defineProperty;var a=(t,e,n)=>e in t?l(t,e,{enumerable:!0,configurable:!0,writable:!0,value:n}):t[e]=n;var s=(t,e,n)=>a(t,typeof e!="symbol"?e+"":e,n);import{b as d}from"./paths.DwtuMIgI.js";class f{}class h extends f{async loadAd(e,n,R){return e.classList.add("block","bg-neutral-500","rounded-lg","overflow-hidden"),e.innerHTML=`
       <div class="flex items-center justify-center h-full">
         <span>Ad Placeholder ${e.clientWidth}x${e.clientHeight}</span>
       </div>
