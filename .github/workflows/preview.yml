@@ -3,7 +3,6 @@
 # Based on https://github.com/marketplace/actions/deploy-pr-preview#usage.
 
 name: Deploy PR previews
-
 on:
   pull_request:
     branches:
@@ -19,7 +18,8 @@ on:
       - 'static/**'
       - '.env'
       - '.env.*'
-
+permissions:
+  contents: write
 concurrency: preview-${{ github.ref }}
 
 jobs:
