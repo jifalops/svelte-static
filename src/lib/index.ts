@@ -17,7 +17,7 @@ import { TelemetryServiceMock } from './telemetry/service_mock';
 
 const init_start = performance.now();
 
-export const log = new Log(IS_PRODUCTION_BUILD ? Log.INFO : Log.TRACE);
+export const log = new Log(IS_PRODUCTION_BUILD ? Log.TRACE : Log.TRACE);
 
 log.debug(init_start, 'Initializing...');
 log.debug('Config:', {
