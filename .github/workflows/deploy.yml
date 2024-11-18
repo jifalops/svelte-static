@@ -18,11 +18,13 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
+      - name: Set BASE_PATH
+        run: echo "BASE_PATH=/${{ github.event.repository.name }}" >> $GITHUB_ENV
+
       - name: Install and Build 🔧
         run: |
           npm ci
           npm run build
-          npm run obfuscate
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
