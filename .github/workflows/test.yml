@@ -5,9 +5,25 @@ name: Test
 on:
   push:
     branches: main
+    paths:
+      - '**.js'
+      - '**.ts'
+      - '**.json'
+      - 'src/**'
+      - 'static/**'
+      - '.env'
+      - '.env.*'
   pull_request:
     draft: false
     branches: main
+    paths:
+      - '**.js'
+      - '**.ts'
+      - '**.json'
+      - 'src/**'
+      - 'static/**'
+      - '.env'
+      - '.env.*'
 jobs:
   test:
     timeout-minutes: 5
