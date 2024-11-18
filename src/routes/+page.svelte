@@ -24,7 +24,7 @@
 		Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation.
 	</p>
 	<p>API test: {testResult}</p>
-	<footer>
-		<ins bind:this={ad} class="block h-16 w-64"></ins>
-	</footer>
 </article>
+<footer>
+	<ins bind:this={ad} class="block h-16 w-64"></ins>
+</footer>
