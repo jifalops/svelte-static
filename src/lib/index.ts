@@ -1,5 +1,7 @@
 // place files you want to import through the `$lib` alias in this folder.
 
+import { base } from '$app/paths';
+
 import { AdvertisingServiceGoogleAdsense } from './advertising/service_google_adsense';
 import { AdvertisingServiceMock } from './advertising/service_mock';
 import { App } from './app';
@@ -17,7 +19,7 @@ import { TelemetryServiceMock } from './telemetry/service_mock';
 
 const init_start = performance.now();
 
-export const log = new Log(IS_PRODUCTION_BUILD ? Log.TRACE : Log.TRACE);
+export const log = new Log(IS_PRODUCTION_BUILD ? Log.INFO : Log.TRACE);
 
 log.debug(init_start, 'Initializing...');
 log.debug('Config:', {
@@ -38,4 +40,4 @@ export const app = new App(
 		: new TelemetryServiceMock()
 );
 
-log.debug(performance.now(), 'Initialized.');
+log.info(performance.now(), `Initialized ${base}.`);
