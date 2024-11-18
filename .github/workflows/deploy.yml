@@ -25,7 +25,6 @@ jobs:
         run: |
           npm ci
           npm run build
-          npm run obfuscate
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
