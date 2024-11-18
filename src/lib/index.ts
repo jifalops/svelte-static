@@ -40,4 +40,4 @@ export const app = new App(
 		: new TelemetryServiceMock()
 );
 
-log.info(performance.now(), `Initialized ${base}.`);
+log.info(performance.now(), base ? `Initialized at ${base}.` : 'Initialized.');
