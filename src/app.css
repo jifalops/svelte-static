@@ -3,6 +3,7 @@
 @import 'tailwindcss/utilities';
 
 @layer base {
+	/* Toogle light/dark mode on your OS to see changes. */
 	body {
 		@apply font-sans antialiased;
 		@apply bg-white text-neutral-900;

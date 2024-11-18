@@ -20,6 +20,18 @@
 		{
 			"splitTerminals": [
 				{
+					"name": "mock api",
+					"commands": [
+						"echo 'Pretending you have a local server running...'",
+						"echo 'You can delete this in your .vscode/settings.json.'",
+						"npx local-cors-proxy --proxyUrl https://dummyjson.com --port 3000"
+					]
+				},
+			]
+		},
+		{
+			"splitTerminals": [
+				{
 					"name": "dev",
 					"commands": [
 						"npm install && npm run test:unit -- --run && npm run dev -- --host"

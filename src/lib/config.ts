@@ -1,5 +1,6 @@
 /** See https://vite.dev/guide/env-and-mode#modes */
-export const IS_PRODUCTION_BUILD = import.meta.env.MODE === 'production';
+export const BUILD_MODE = import.meta.env.MODE;
+export const IS_PRODUCTION_BUILD = BUILD_MODE === 'production';
 
 /** Check if running on localhost or a local network. */
 export const IS_LOCAL_ENVIRONMENT =

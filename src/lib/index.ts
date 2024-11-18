@@ -6,6 +6,7 @@ import { App } from './app';
 import {
 	ADSENSE_CLIENT_ID,
 	API_URL,
+	BUILD_MODE,
 	GA_MEASUREMENT_ID,
 	IS_LOCAL_ENVIRONMENT,
 	IS_PRODUCTION_BUILD
@@ -20,6 +21,7 @@ export const log = new Log(IS_PRODUCTION_BUILD ? Log.INFO : Log.TRACE);
 
 log.debug(init_start, 'Initializing...');
 log.debug('Config:', {
+	BUILD_MODE,
 	API_URL,
 	IS_PRODUCTION_BUILD,
 	IS_LOCAL_ENVIRONMENT,
