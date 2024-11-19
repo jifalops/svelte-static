@@ -1,59 +1,55 @@
 {
-	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[svelte]": {
-		"editor.defaultFormatter": "svelte.svelte-vscode"
-	},
-	"editor.codeActionsOnSave": {
-		"source.fixAll": "explicit",
-		"source.unusedImports": "explicit",
-		"source.organizeImports": "explicit"
-	},
-	"files.associations": {
-		"*.css": "tailwindcss"
-	},
-	"restoreTerminals.terminals": [
-		{
-			"splitTerminals": [
-				{
-					"name": "mock api",
-					"commands": [
-						"echo 'Pretending you have a local server running...'",
-						"echo 'You can delete this in your .vscode/settings.json.'",
-						"npx local-cors-proxy --proxyUrl https://dummyjson.com --port 3000"
-					]
-				},
-			]
-		},
-		{
-			"splitTerminals": [
-				{
-					"name": "dev",
-					"commands": [
-						"npm install && npm run test:unit -- --run && npm run dev -- --host"
-					]
-				},
-				{
-					"name": "preview",
-					"commands": [
-						"npm install && npm run test:e2e && npm run preview -- --host"
-					]
-				},
-			]
-		},
-		{
-			"splitTerminals": [
-				{
-					"name": "bash",
-					"commands": []
-				},
-			]
-		}
-	],
-	// Fix the double formatter issue that leaves invalid code for imports.
-	"typescript.format.enable": false
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.unusedImports": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "restoreTerminals.terminals": [
+    {
+      "splitTerminals": [
+        {
+          "name": "mock api",
+          "commands": [
+            "echo 'Pretending you have a local server running...'",
+            "echo 'You can delete this in your .vscode/settings.json.'",
+            "npx local-cors-proxy --proxyUrl https://dummyjson.com --port 3000"
+          ]
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "dev",
+          "commands": ["npm install && npm run test:unit -- --run && npm run dev -- --host"]
+        },
+        {
+          "name": "preview",
+          "commands": ["npm install && npm run test:e2e && npm run preview -- --host"]
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "bash",
+          "commands": []
+        }
+      ]
+    }
+  ],
+  // Fix the double formatter issue that leaves invalid code for imports.
+  "typescript.format.enable": false
 }

@@ -3,33 +3,33 @@
 @import 'tailwindcss/utilities';
 
 @layer base {
-	/* Toogle light/dark mode on your OS to see changes. */
-	body {
-		@apply font-sans antialiased;
-		@apply bg-white text-neutral-900;
-		@apply dark:bg-neutral-900 dark:text-white;
-	}
+  /* Toogle light/dark mode on your OS to see changes. */
+  body {
+    @apply font-sans antialiased;
+    @apply bg-white text-neutral-900;
+    @apply dark:bg-neutral-900 dark:text-white;
+  }
 
-	h1 {
-		@apply text-2xl font-bold;
-	}
-	h2 {
-		@apply text-xl font-bold;
-	}
-	h3 {
-		@apply text-lg font-bold;
-	}
-	h4 {
-		@apply text-base font-bold;
-	}
-	h5 {
-		@apply text-sm font-bold;
-	}
-	h6 {
-		@apply text-xs font-bold;
-	}
+  h1 {
+    @apply text-2xl font-bold;
+  }
+  h2 {
+    @apply text-xl font-bold;
+  }
+  h3 {
+    @apply text-lg font-bold;
+  }
+  h4 {
+    @apply text-base font-bold;
+  }
+  h5 {
+    @apply text-sm font-bold;
+  }
+  h6 {
+    @apply text-xs font-bold;
+  }
 
-	a {
-		@apply text-blue-600 dark:text-blue-500;
-	}
+  a {
+    @apply text-blue-600 dark:text-blue-500;
+  }
 }

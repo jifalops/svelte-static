@@ -4,9 +4,9 @@ export const IS_PRODUCTION_BUILD = BUILD_MODE === 'production';
 
 /** Check if running on localhost or a local network. */
 export const IS_LOCAL_ENVIRONMENT =
-	window.location.hostname === 'localhost' ||
-	window.location.hostname === '127.0.0.1' ||
-	window.location.hostname.includes('.local');
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1' ||
+  window.location.hostname.includes('.local');
 
 /** The base URL for the backend API. */
 export const API_URL = import.meta.env.VITE_API_URL as string;
