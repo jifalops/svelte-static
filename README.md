@@ -36,11 +36,15 @@ A starting point for static websites, SPAs, and PWAs using Svelte 5 with adapter
 ## Getting Started
 
 1. Clone this repository / use this template.
-2. In your repository settings for GitHub Pages, choose `Deploy from a branch`.
+1. In your repository settings for GitHub Pages, choose `Deploy from a branch`.
    ![GitHub Pages settings](https://github.com/rossjrw/pr-preview-action/raw/main/.github/deployment-settings.png)
    > You may have to create the `gh-pages` branch first or let the `.github/workflows/deploy.yml` workflow do it for you.
-3. Install the [Dev Containers][3] extension for VS Code to develop within the configured environment.
+1. Install the [Dev Containers][3] extension for VS Code to develop within the configured environment.
+1. For seamless integration:
+   1. Set the `TZ` and `GITHUB_TOKEN` environment variables on the host ([example][4]).
+   1. Have a `dotfiles` repo with an `install.sh` script that sets up your environment. See [jifalops/dotfiles][2] for an clonable example.
 
 [1]: https://github.com/devcontainers/images/tree/main/src/typescript-node
 [2]: https://github.com/jifalops/dotfiles
 [3]: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
+[4]: https://github.com/jifalops/dotfiles/blob/bf9627445abf5ffe25515e8a6d2fe1d1c681e606/.sh_common#L87
