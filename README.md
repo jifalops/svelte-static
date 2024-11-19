@@ -22,7 +22,7 @@ A starting point for static websites, SPAs, and PWAs using Svelte 5 with adapter
    1. Previewing PRs in a Github Pages subdirectory.
 1. Obfuscated builds, locally and deployed (`npm run build && npm run obfuscate`).
 1. Tailwind preconfigured with a simple light and dark theme.
-1. Modern Ports and Adapters (hexagonal) architecture with a feature-based directory structure.
+1. A modern Ports and Adapters (hexagonal) architecture with a feature-based directory structure.
 1. Core services baked in:
    1. Telemetry with Google Analytics 4, including a mock implementation.
    1. Advertising with Google AdSense, including a mock implementation.
