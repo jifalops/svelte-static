@@ -10,4 +10,4 @@ services:
     environment:
       TZ: ${TZ} # Timezone
       GITHUB_TOKEN: ${GITHUB_TOKEN} # GitHub CLI
-      API_URL: 'http://localhost:3000/proxy'
+      API_URL: 'http://localhost:3099/proxy'

@@ -22,23 +22,25 @@
         {
           "name": "mock api",
           "commands": [
-            "echo 'Pretending you have a local server running...'",
-            "echo 'You can delete this in your .vscode/settings.json.'",
-            "npx local-cors-proxy --proxyUrl https://dummyjson.com --port 3000"
+            "npx local-cors-proxy --proxyUrl https://dummyjson.com --port 3099"
           ]
-        }
+        },
       ]
     },
     {
       "splitTerminals": [
         {
           "name": "dev",
-          "commands": ["npm install && npm run test:unit -- --run && npm run dev -- --host"]
+          "commands": [
+            "npm install && npm run test:unit -- --run && npm run dev -- --host"
+          ]
         },
         {
           "name": "preview",
-          "commands": ["npm install && npm run test:e2e && npm run preview -- --host"]
-        }
+          "commands": [
+            "npm install && npm run test:e2e && npm run preview -- --host"
+          ]
+        },
       ]
     },
     {
@@ -46,7 +48,7 @@
         {
           "name": "bash",
           "commands": []
-        }
+        },
       ]
     }
   ],

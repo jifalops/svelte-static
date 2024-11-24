@@ -12,7 +12,13 @@ export const IS_LOCAL_ENVIRONMENT =
 export const API_URL = import.meta.env.VITE_API_URL as string;
 
 /** The Google Analytics measurement ID. */
-export const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID as string;
+export const GOOGLE_ANALYTICS_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_ID as string;
+
+/** The Google Ads ID. */
+export const GOOGLE_ADS_ID = import.meta.env.VITE_GOOGLE_ADS_ID as string;
 
 /** The AdSense Client ID. */
-export const ADSENSE_CLIENT_ID = import.meta.env.VITE_ADSENSE_CLIENT_ID as string;
+export const GOOGLE_ADSENSE_ID = import.meta.env.VITE_GOOGLE_ADSENSE_ID as string;
+
+/** The Sentry DSN. */
+export const SENTRY_DSN = import.meta.env.VITE_SENTRY_DSN as string;

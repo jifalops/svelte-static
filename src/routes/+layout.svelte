@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { app } from '$lib';
+  import { app, log } from '$lib';
   import { onMount } from 'svelte';
   import '../app.css';
 
   onMount(() => {
+    log.info(performance.now(), 'Page loaded.');
     app.telemetry.pageView(window.location.pathname);
   });
 </script>

@@ -1,18 +1,6 @@
-# Run unit and integration tests.
-#
-# Based on https://playwright.dev/docs/next/ci#github-actions.
-name: Test
+# Run unit tests.
+name: 'Test: Unit'
 on:
-  push:
-    branches: main
-    paths:
-      - '**.js'
-      - '**.ts'
-      - '**.json'
-      - 'src/**'
-      - 'static/**'
-      - '.env'
-      - '.env.*'
   pull_request:
     draft: false
     branches: main
@@ -30,9 +18,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
       - name: Install dependencies
         run: npm ci
       - name: Run unit tests
