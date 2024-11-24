@@ -1,36 +1,36 @@
 import { AdDisplayService } from './service';
 
 declare global {
-	interface Window {
-		adsbygoogle: any[];
-	}
+  interface Window {
+    adsbygoogle: any[];
+  }
 }
 
 /**
  * Google AdSense adapter for the ad display service.
  */
 export class AdDisplayServiceGoogleAdsense extends AdDisplayService {
-	private clientId: string;
+  private clientId: string;
 
-	constructor(clientId: string) {
-		super();
-		this.clientId = clientId;
-		window.adsbygoogle = window.adsbygoogle || [];
-		const script = document.createElement('script');
-		script.async = true;
-		script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${this.clientId}`;
-		script.crossOrigin = 'anonymous';
-		document.head.appendChild(script);
-	}
+  constructor(clientId: string) {
+    super();
+    this.clientId = clientId;
+    window.adsbygoogle = window.adsbygoogle || [];
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${this.clientId}`;
+    script.crossOrigin = 'anonymous';
+    document.head.appendChild(script);
+  }
 
-	async loadAd(element: HTMLElement, adSlot: string, format: string = 'auto'): Promise<void> {
-		window.adsbygoogle.push({
-			element,
-			adUnitPath: adSlot,
-			format: format
-		});
-		return new Promise((resolve) => {
-			element.addEventListener('load', () => resolve());
-		});
-	}
+  async loadAd(element: HTMLElement, adSlot: string, format: string = 'auto'): Promise<void> {
+    window.adsbygoogle.push({
+      element,
+      adUnitPath: adSlot,
+      format: format
+    });
+    return new Promise((resolve) => {
+      element.addEventListener('load', () => resolve());
+    });
+  }
 }

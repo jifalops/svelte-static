@@ -6,4 +6,6 @@ import {
 test('home page has expected <main>', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('main')).toBeVisible();
+  await page.goto('/');
+  await expect(page.locator('main')).toBeVisible();
 });

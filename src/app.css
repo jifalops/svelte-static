@@ -35,10 +35,10 @@
 }
 
 @layer components {
-	button,
-	.btn {
-		@apply inline-block rounded-md px-4 py-2 hover:ring-1 focus:ring-2;
-		@apply bg-blue-600 text-white;
-		@apply dark:bg-blue-500;
-	}
+  button,
+  .btn {
+    @apply inline-block rounded-md px-4 py-2 hover:ring-1 focus:ring-2;
+    @apply bg-blue-600 text-white;
+    @apply dark:bg-blue-500;
+  }
 }

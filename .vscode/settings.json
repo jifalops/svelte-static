@@ -24,7 +24,7 @@
           "commands": [
             "npx local-cors-proxy --proxyUrl https://dummyjson.com --port 3099"
           ]
-        },
+        }
       ]
     },
     {
@@ -40,7 +40,7 @@
           "commands": [
             "npm install && npm run test:e2e && npm run preview -- --host"
           ]
-        },
+        }
       ]
     },
     {
@@ -48,7 +48,7 @@
         {
           "name": "bash",
           "commands": []
-        },
+        }
       ]
     }
   ],
