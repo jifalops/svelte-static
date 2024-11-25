@@ -1,6 +1,6 @@
 # Svelte 5 Website Template
 
-[![Test](https://github.com/jifalops/svelte-static/actions/workflows/test.yml/badge.svg)](https://github.com/jifalops/svelte-static/actions/workflows/test.yml)
+[![Deploy](https://github.com/jifalops/svelte-static/actions/workflows/deploy.yml/badge.svg)](https://github.com/jifalops/svelte-static/actions/workflows/deploy.yml)
 
 A starting point for static websites, SPAs, and PWAs using Svelte 5 with adapter static.
 
