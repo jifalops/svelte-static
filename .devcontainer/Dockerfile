@@ -7,7 +7,3 @@ RUN sudo npx playwright install-deps &&\
 # Install additional packages
 RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
   trash-cli
-
-# Install global npm packages
-RUN npm install --global \
-  local-cors-proxy

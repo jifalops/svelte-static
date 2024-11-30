@@ -20,16 +20,6 @@
     {
       "splitTerminals": [
         {
-          "name": "mock api",
-          "commands": [
-            "npx local-cors-proxy --proxyUrl https://dummyjson.com --port 3099"
-          ]
-        }
-      ]
-    },
-    {
-      "splitTerminals": [
-        {
           "name": "dev",
           "commands": [
             "npm install && npm run test:unit -- --run && npm run dev -- --host"
