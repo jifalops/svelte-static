@@ -28,7 +28,7 @@ const init_start = performance.now();
 
 export const log = new Log(IS_PRODUCTION_BUILD ? Log.INFO : Log.TRACE);
 
-log.debug(init_start, 'Initializing...');
+log.debug(init_start.toFixed(1), 'Initializing...');
 log.debug('Config:', {
   API_URL,
   BUILD_MODE,
@@ -66,4 +66,4 @@ try {
 }
 export const app = _app;
 
-log.info(performance.now(), base ? `Initialized at ${base}.` : 'Initialized.');
+log.info(performance.now().toFixed(1), base ? `Initialized at ${base}.` : 'Initialized.');
